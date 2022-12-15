@@ -1,3 +1,18 @@
+<?php
+
+    $_GET = ["number"]; 
+    $alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    $numbers = ["0","1","2","3","4","5","6","7","8","9"];
+    $simbols = ["£","$","%","!","&", "?"];
+
+    
+    for ($i = 0; $i < 4; $i++) {
+        $rand_keys = array_rand($alphabet, 1);
+       
+    }
+    // return $pass; 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +29,24 @@
 </head>
 <body>
    <div class="pass-container">
-    <h1 class="text-center">PHP STRONG PASSWORD GENERATOR</h1>
+    <h1 class="mt-3 text-center">PHP STRONG PASSWORD GENERATOR</h1>
 
     <form>
 
-    <div class="mb-3">
+    <div class="mt-3mb-3">
         <label for="exampleInputEmail1" class="form-label">Lunghezza password</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Inserisci minimo 3 caratteri.</div>
+        <input type="number" class="form-control input-zone" id="InputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Min: 3</div>
     </div>
    
     
-    <button type="submit" class="btn btn-primary">Genera</button>
-    <button type="reset" class="btn btn-secondary">Annulla</button>
+    <button type="submit" class="btn btn-primary mt-3">Genera</button>
+    <button type="reset" class="btn btn-secondary mt-3">Annulla</button>
 
     </form>
+    <div>
+        <?php echo $rand_keys; ?>
+    </div>
    </div>
 </body>
 </html>

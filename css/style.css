@@ -2,3 +2,7 @@
   max-width: 1200px;
   margin: auto;
 }
+
+.form-control {
+  width: 400px;
+}
